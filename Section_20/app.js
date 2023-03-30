@@ -33,3 +33,30 @@ isSnakeEyes("2", "2");
 function multiply(in1, in2) {
     return parseInt(in1 * in2);
 }
+
+function lastElement(element) {
+    if (element.length === 0) {
+        return null;
+    } else {
+        return element[element.length - 1];
+    }
+
+}
+
+function sumArray(arg) {
+    let sum = 0;
+    for (let i = 0; i < arg.length; i++) {
+        sum += arg[i];
+    }
+    return sum;
+}
+
+function returnDay(para) {
+    let dayOfWeek = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+    if (para < 1 || para > 7) {
+        return null
+    } else {
+        return dayOfWeek[para - 1];
+
+    }
+}
