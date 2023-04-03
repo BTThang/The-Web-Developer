@@ -158,21 +158,23 @@ for (let link of allLink) {
     link.style.borderRadius
 }
 
-const h2 = document.querySelector('#container');
-h2.style.textAlign = 'center';
-const image = document.querySelector('img')
-image.style.width = '150px'
-image.style.borderRadius = '50%'
+// const h2 = document.querySelector('#container');
+// h2.style.textAlign = 'center';
+// const imag = document.querySelector('img')
+// imag.style.width = '150px'
+// imag.style.borderRadius = '50%'
 
 const colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']; //PLEASE DON'T CHANGE THIS LINE!
 
 //YOU CODE GOES HERE:
 
-const change = document.querySelectorAll('span');
+// const change = document.querySelectorAll('span');
 
-for (let i = 0; i < change.length; i++) { change[i].style.color = colors[i] }
+// for (let i = 0; i < change.length; i++) { change[i].style.color = colors[i] }
 
-// ClassList======
+
+
+// ===========ClassList======
 // const h2 = document.querySelector('h2');
 // undefined
 // h2.getAttribute('class');
@@ -182,10 +184,72 @@ for (let i = 0; i < change.length; i++) { change[i].style.color = colors[i] }
 // h2.setAttribute('class', 'purple');
 // undefined
 
-const h2 = document.querySelector('h2')
-undefined
-h2.classList
-DOMTokenList[value: '']length: 0value: ""[[Prototype]]: DOMTokenList
-h2.classList.add('purple')
-undefined
-h2.classList.add('border')
+// const h2 = document.querySelector('h2')
+// undefined
+// h2.classList
+// DOMTokenList[value: '']length: 0value: ""[[Prototype]]: DOMTokenList
+// h2.classList.add('purple')
+// undefined
+// h2.classList.add('border')
+
+// const pa = document.querySelector('h2')
+// // undefined
+// pa.getAttribute('class')
+// // 'purple'
+// pa.setAttribute('class', 'border')
+
+// h2.classList.add('purple')
+
+// In index.html, you'll find 6 <li> elements, two of which have the 'highlight' class applied to them. 
+
+// Please use JavaScript and the classList property to invert which elements have the highlight class. 
+
+// Basically iterate over all the <li> elements and toggle the class of 'highlight' on each one. 
+
+
+// WRITE YOUR CODE IN HERE:
+const list = document.querySelectorAll('li');
+
+for (let li of list) {
+    li.classList.toggle('highlight');
+}
+
+const lis = document.querySelectorAll('li')
+
+for (let li of lis) {
+    if (li.classList.contains('highlight')) {
+        li.classList.remove('highlight');
+    } else {
+        li.classList.add('highlight');
+    }
+}
+
+// =================================================
+// // const squareImg = document.querySelector('.square')
+// squareImg.parentElement
+// squareImg.parentElement.nextElementSibling
+
+//==============================
+const newImg = document.createElement('img');
+newImg.src = ('https://www.akc.org/wp-content/uploads/2016/05/samoyed-mother-dog-with-puppy-outdoors.jpg')
+document.body.appendChild(newImg);
+newImg.classList.add('square');
+
+const newH3 = document.createElement('h3')
+newH3.innerText = "I am a new person";
+document.body.appendChild(newH3);
+
+const p = document.querySelector('p')
+p.append('I am new text yayssyyssy!!!')
+
+
+// WRITE YOUR CODE IN HERE:
+
+const btn = document.querySelector('#container');
+
+for (let i = 0; i < 100; i++) {
+
+    const buttons = document.createElement('button');
+    buttons.innerText = 'Hello';
+    btn.appendChild(buttons);
+}
